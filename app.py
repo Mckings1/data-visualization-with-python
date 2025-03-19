@@ -114,6 +114,7 @@ def update_output_container(selected_statistics, input_year):
         )
 
   return [
+             
     html.Div(
         className='chart-container',
         children=[
