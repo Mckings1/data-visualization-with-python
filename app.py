@@ -113,7 +113,7 @@ def update_output_container(selected_statistics, input_year):
             )
         )
 
-  return [
+        return [
              
     html.Div(
         className='chart-container',
