@@ -113,10 +113,16 @@ def update_output_container(selected_statistics, input_year):
             )
         )
 
-        return [
-            html.Div(className='chart-item', children=[html.Div(children=R_chart1), html.Div(children=R_chart2)], style={'display': 'flex'}),
-            html.Div(className='chart-item', children=[html.Div(children=R_chart3), html.Div(children=R_chart4)], style={'display': 'flex'})
-        ]
+  return [
+    html.Div(
+        className='chart-container',
+        children=[
+            html.Div(className='chart-item', children=[R_chart1, R_chart2]),
+            html.Div(className='chart-item', children=[R_chart3, R_chart4])
+        ],
+        style={'display': 'flex', 'flex-wrap': 'wrap', 'justify-content': 'center', 'gap': '20px'}
+    )
+]
     
     elif selected_statistics == 'Yearly Statistics' and input_year:
         yearly_data = data[data['Year'] == input_year]
